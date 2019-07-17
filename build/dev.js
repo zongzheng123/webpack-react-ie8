@@ -4,6 +4,8 @@ const merge = require('webpack-merge')
 const path = require('path')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
+console.dir(webpackConfig)
+
 const config = merge(webpackConfig, {
   mode: 'development',
   devtool: 'inline-source-map',
@@ -24,9 +26,11 @@ const config = merge(webpackConfig, {
   ]
 })
 
-webpack(webpackConfig, (err, stats) => { // Stats Object
-  if (err || stats.hasErrors()) {
-    // Handle errors here
-  }
-  // Done processing
-})
+
+module.exports = config
+// webpack(webpackConfig, (err, stats) => { // Stats Object
+//   if (err || stats.hasErrors()) {
+//     // Handle errors here
+//   }
+//   // Done processing
+// })

@@ -2,21 +2,21 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
-module.export = {
+module.exports = {
   context: path.resolve(__dirname, '../src'),
   entry: {
     main: './main.js'
   },
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname,  '../dist')
   },
   resolve: {
-    extensions: [ '.js', '']
+    extensions: [ '.js']
   },
   module: {
     rules: [{
-      test: '\.js$',
+      test: /\.js$/,
       use: [
         {
           loader: 'babel-loader'
