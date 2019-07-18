@@ -6,9 +6,11 @@
   ],
   "plugins": [
     ["@babel/plugin-transform-react-jsx", {
-      "pragma": "dom", // default pragma is React.createElement
-      "pragmaFrag": "DomFrag", // default is React.Fragment
-      "throwIfNamespace": false // defaults to true
-    }]
+      "pragma": "React.createElement" // default pragma is React.createElement
+//      "pragmaFrag": "DomFrag", // default is React.Fragment
+//      "throwIfNamespace": false // defaults to true
+    }],
+    ["@babel/plugin-transform-runtime"],
+    ["@babel/plugin-transform-modules-commonjs"] // ie8导入导出会有问题用这个修复
   ]
 }

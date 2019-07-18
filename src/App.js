@@ -1,5 +1,8 @@
 import React from 'react'
+import style from './App.less'
 
-export default function App () {
-  return (<div>13214213</div>)
+function App () {
+  return (<div className={style.wrap}>54644545454545</div>)
 }
+
+export default App
